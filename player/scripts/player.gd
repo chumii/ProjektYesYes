@@ -5,6 +5,7 @@ var speed = 100
 
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = animation_tree.get("parameters/playback")
+@onready var interact_indicator = $InteractIndicator
 
 var found_interactable_obj : bool = false
 var current_interactable_obj : Interactable = null
@@ -44,7 +45,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("interact_use_speak"):
 		if found_interactable_obj:
 			get_viewport().set_input_as_handled()
-			current_interactable_obj._use()
+			current_interactable_obj._use_speak()
 		else:
 			print("Hier ist nichts was ich benutzen kann...")
 	
@@ -60,10 +61,12 @@ func _unhandled_input(event):
 func _interact_found(obj):
 	found_interactable_obj = true
 	current_interactable_obj = obj
+	interact_indicator.show()
 	
 func _interact_left():
 	found_interactable_obj = false
 	current_interactable_obj = null
+	interact_indicator.hide()
 	
 func _interact():
 	current_interactable_obj._look_at()

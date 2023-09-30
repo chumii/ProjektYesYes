@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2fmv8g4d1fdn"]
+[gd_scene load_steps=8 format=3 uid="uid://c2fmv8g4d1fdn"]
 
 [ext_resource type="Script" path="res://world/scripts/main.gd" id="1_cjm48"]
 [ext_resource type="PackedScene" uid="uid://dhxjdh6cutkj4" path="res://objects/test_object/test_obj.tscn" id="2_75knk"]
 [ext_resource type="PackedScene" uid="uid://ctyg0np1o1ipy" path="res://player/player.tscn" id="2_fyy76"]
 [ext_resource type="Texture2D" uid="uid://c7roecgjmqqvp" path="res://icon.svg" id="3_y3xvb"]
 [ext_resource type="Script" path="res://world/test_obj_2.gd" id="4_1olpo"]
+[ext_resource type="Resource" uid="uid://b3rmc5he1o57x" path="res://dialogues/test.dialogue" id="5_jb52c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gt8p0"]
 size = Vector2(110, 20)
@@ -17,14 +18,14 @@ position = Vector2(265, 167)
 obj_name = "Penis"
 look_at_text = "Wow!"
 
-[node name="Player" parent="." instance=ExtResource("2_fyy76")]
-position = Vector2(111, 142)
-
 [node name="test_obj_2" type="Area2D" parent="."]
 position = Vector2(110, 247)
 script = ExtResource("4_1olpo")
 obj_name = "Mona Lisa"
 look_at_text = "Wunderschön!"
+is_npc = true
+dialogue_res = ExtResource("5_jb52c")
+dialogue_start = "mona_lisa_start"
 
 [node name="Sprite2D" type="Sprite2D" parent="test_obj_2"]
 scale = Vector2(0.5, 0.5)
@@ -33,6 +34,17 @@ texture = ExtResource("3_y3xvb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test_obj_2"]
 position = Vector2(20, 30)
 shape = SubResource("RectangleShape2D_gt8p0")
+
+[node name="Player" parent="." instance=ExtResource("2_fyy76")]
+position = Vector2(111, 142)
+
+[node name="TutorialUi" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="TutorialUi"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Tutorial UI"
 
 [connection signal="body_entered" from="test_obj_2" to="test_obj_2" method="_on_body_entered"]
 [connection signal="body_exited" from="test_obj_2" to="test_obj_2" method="_on_body_exited"]

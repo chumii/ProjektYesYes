@@ -267,3 +267,13 @@ parameters/Walk/blend_position = Vector2(0, 0)
 position = Vector2(0, 15)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_7550n")
+
+[node name="InteractIndicator" type="Label" parent="."]
+visible = false
+offset_left = -19.0
+offset_top = -49.0
+offset_right = 21.0
+offset_bottom = -23.0
+size_flags_vertical = 0
+text = "?"
+horizontal_alignment = 1

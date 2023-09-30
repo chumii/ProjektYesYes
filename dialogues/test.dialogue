@@ -1,0 +1,21 @@
+~ mona_lisa_start
+
+Mona Lisa: [[Hi|Hello|Howdy]].
+if RiddleStatus.zettel == "has":
+	- Gebe Zettel an Mona Lisa
+		set RiddleStatus.zettel = "gave"
+		Ich: Hier, nimm.
+		Mona Lisa: Danke.
+	- Zettel behalten
+		Ich: Ich behalte den Zettel lieber.
+elif RiddleStatus.zettel == "gave":
+	Mona Lisa: Danke nochmal für den Zettel.
+	Ich: Ich hätte den Zettel gerne zurück!
+	Mona Lisa: Nagut, hier bitte.
+	set RiddleStatus.zettel = "has"
+else:
+	Ich: Kann ich bitte den Zettel haben?
+	set RiddleStatus.zettel = "has"
+	Mona Lisa: Klar, hier.
+
+=> END
