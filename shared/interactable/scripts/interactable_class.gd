@@ -1,4 +1,4 @@
-class_name Interactable extends Area2D
+class_name Interactable extends StaticBody2D
 
 @export var obj_name : String = ""
 @export var look_at_text : String = ""

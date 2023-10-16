@@ -15,9 +15,9 @@ func _ready():
 	GlobalSignals.connect("interact_left", _interact_left)
 
 func _process(delta):
-	_move()
+	_move(delta)
 	
-func _move():
+func _move(delta):
 	input_movement = Input.get_vector("move_left","move_right","move_up","move_down")
 	
 	if input_movement != Vector2.ZERO:
@@ -30,7 +30,9 @@ func _move():
 		animation_state.travel("Idle")
 		velocity = Vector2.ZERO
 		
-	move_and_slide()
+#	move_and_slide()
+	move_and_collide(velocity * delta)
+	
 
 func _unhandled_input(event):
 	#Look at
