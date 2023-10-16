@@ -7,7 +7,7 @@
 size = Vector2(191, 106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgdyf"]
-size = Vector2(111, 65)
+size = Vector2(111, 115)
 
 [node name="test_obj" type="StaticBody2D"]
 script = ExtResource("1_ujsyk")
@@ -22,7 +22,7 @@ position = Vector2(4.5, 43)
 shape = SubResource("RectangleShape2D_png2f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 22.5)
+position = Vector2(-1.5, -2.5)
 shape = SubResource("RectangleShape2D_hgdyf")
 debug_color = Color(0.705882, 0.364706, 0.831373, 0.419608)
 

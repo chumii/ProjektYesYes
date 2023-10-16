@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BaseItem" load_steps=3 format=3 uid="uid://3x58neoc4dec"]
+
+[ext_resource type="Script" path="res://objects/items/base_item/base_item.gd" id="1_w7nh5"]
+[ext_resource type="Texture2D" uid="uid://clxk6hqmany2e" path="res://objects/items/tesafilm.png" id="1_x6px0"]
+
+[resource]
+script = ExtResource("1_w7nh5")
+ID = 0
+Name = "Tesafilm"
+ResourcePath = ""
+Icon = ExtResource("1_x6px0")
+Quantity = 1
+IsStackable = true
+StackSize = 3

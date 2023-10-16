@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BaseItem" load_steps=3 format=3 uid="uid://ciscw7vuqcyuf"]
+
+[ext_resource type="Script" path="res://objects/items/base_item/base_item.gd" id="1_2jg2a"]
+[ext_resource type="Texture2D" uid="uid://dwhub0km0uc00" path="res://objects/items/stein.png" id="1_sw4hi"]
+
+[resource]
+script = ExtResource("1_2jg2a")
+ID = 3
+Name = "Stein"
+ResourcePath = ""
+Icon = ExtResource("1_sw4hi")
+Quantity = 1
+IsStackable = true
+StackSize = 5

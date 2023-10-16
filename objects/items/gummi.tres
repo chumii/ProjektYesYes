@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BaseItem" load_steps=3 format=3 uid="uid://coy31ssw25vab"]
+
+[ext_resource type="Script" path="res://objects/items/base_item/base_item.gd" id="1_dnitm"]
+[ext_resource type="Texture2D" uid="uid://c4qjtqv8r1ff5" path="res://objects/items/gummi.png" id="1_wyh0r"]
+
+[resource]
+script = ExtResource("1_dnitm")
+ID = 1
+Name = "Gummiband"
+ResourcePath = ""
+Icon = ExtResource("1_wyh0r")
+Quantity = 1
+IsStackable = true
+StackSize = 3

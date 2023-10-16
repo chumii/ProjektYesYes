@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2fmv8g4d1fdn"]
+[gd_scene load_steps=5 format=3 uid="uid://c2fmv8g4d1fdn"]
 
 [ext_resource type="Script" path="res://world/scripts/main.gd" id="1_cjm48"]
 [ext_resource type="PackedScene" uid="uid://dhxjdh6cutkj4" path="res://objects/test_object/test_obj.tscn" id="2_75knk"]
+[ext_resource type="PackedScene" uid="uid://bqs8o7f1f760v" path="res://inventory/inventory.tscn" id="2_agci3"]
 [ext_resource type="PackedScene" uid="uid://ctyg0np1o1ipy" path="res://player/player.tscn" id="2_fyy76"]
 
 [node name="Main" type="Node2D"]
@@ -39,6 +40,17 @@ visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "Tutorial UI"
+
+[node name="Inventory" parent="." instance=ExtResource("2_agci3")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -138.0
+offset_top = 150.0
+offset_right = -138.0
+offset_bottom = 150.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(283, 277)
